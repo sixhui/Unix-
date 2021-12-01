@@ -48,7 +48,8 @@ int set_cr_noecho_mode(){
 
     tcsetattr(0, TCSANOW, &ttystate);
 }
-// 
+
+// save & restore mode
 int tty_mode(int how){
     static struct termios original_mode;
     
