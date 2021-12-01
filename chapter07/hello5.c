@@ -16,7 +16,8 @@ int main(int argc, char const *argv[])
     initscr();
     clear();
 
-    while(1){
+    int i = 3;
+    while(i--){
         // show
         move(ROW, pos);
         addstr(message);
@@ -37,6 +38,8 @@ int main(int argc, char const *argv[])
 
     }
 
+    getch();
+    endwin();
     
     
     return 0;

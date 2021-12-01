@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.tcc": "c",
+        "cctype": "c",
+        "regex": "c"
+    }
+}
