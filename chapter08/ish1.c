@@ -6,8 +6,8 @@
 #include <string.h>
 
 
-#define     MAXARGS     20
-#define     ARGLEN      100
+#define     MAXARGS     20      // 最大参数数量
+#define     ARGLEN      100     // 最大参数长度
 
 int main(int argc, char const *argv[])
 {
@@ -20,8 +20,11 @@ int main(int argc, char const *argv[])
 
     while(numargs < MAXARGS){
         printf("Arg[%d]?", numargs);
+        // 添加参数
         if(fgets(argbuf, ARGLEN, stdin) && *argbuf != '\n')
             arglist[numargs++] = makestring(argbuf);
+        
+        // 执行命令
         else{
             if(numargs > 0){
                 arglist[numargs] = NULL;
@@ -32,13 +35,14 @@ int main(int argc, char const *argv[])
     }
 }
 
-
+// 执行命令
 int execute(char* arglist[]){
     execvp(arglist[0], arglist);
     perror("execvp failed");
     exit(1);
 }
 
+// 添加参数
 char* makestring(char *buf){
     char *cp;
     buf[strlen(buf) - 1] = '\0';        // 去掉 \n
