@@ -2,6 +2,10 @@
     "files.associations": {
         "*.tcc": "c",
         "cctype": "c",
-        "regex": "c"
+        "regex": "c",
+        "condition_variable": "c",
+        "future": "c",
+        "mutex": "c",
+        "shared_mutex": "c"
     }
 }

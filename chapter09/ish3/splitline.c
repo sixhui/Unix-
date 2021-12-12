@@ -68,7 +68,7 @@ char** splitline(char* line){
 
     while(*cp != '\0'){
         while(is_delim(*cp)) ++cp;
-        if(*cp == "\0") break;
+        if(*cp == '\0') break;
 
         // dynamically allocate space for char* []
         if(argnum + 1 >= spots){
