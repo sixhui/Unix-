@@ -8,7 +8,7 @@ int set_crmode();
 int tty_mode(int);
 
 /**
- * @brief char-by-char mode
+ * @brief char-by-char mode, instant response
  * 
  * @param argc 
  * @param argv 
@@ -17,12 +17,12 @@ int tty_mode(int);
 int main(int argc, char const *argv[])
 {
     int response;
-    tty_mode(0);
+    tty_mode(0);                        // save
     
-    set_crmode();
+    set_crmode();                       // set
     response = get_response(QUESTION);
     
-    tty_mode(1);
+    tty_mode(1);                        // restore
     return response;
 }
 

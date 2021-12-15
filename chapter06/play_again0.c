@@ -11,7 +11,7 @@ int get_response(char*);
  * purpose: ask if user wants another transaction
  * method:  ask a question, wait for yes/no answer
  * @return 0 -> yes, 1 -> no 
- * better: eliminate need to press enter
+ * better: eliminate need to press Enter
  */
 int main(int argc, char const *argv[])
 {
